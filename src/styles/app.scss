@@ -1,0 +1,25 @@
+$scout: #00a1b6;
+
+body {
+  margin: 0;
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  box-sizing: border-box;
+  background: $scout;
+  margin-bottom: 20px;
+  h1 {
+    color: white;
+  }
+}
+.info {
+  text-align: center;
+  margin: auto;
+  max-width: 500px;
+  font-family: sans-serif;
+}
