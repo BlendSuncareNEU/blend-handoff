@@ -5,6 +5,8 @@ import PrismicConfig from './prismic/prismic-configuration';
 
 import Routes from './routes';
 
+import './styles/main.scss';
+
 ReactDOM.render(
   <PrismicWrapper routes={Routes} repositoryName="blend" />,
   document.getElementById('root')

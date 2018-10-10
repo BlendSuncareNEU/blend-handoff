@@ -1,0 +1,33 @@
+$app-colors: (
+    'brand-primary': #333333,
+    'brand-primary-dark': #333333,
+    'brand-alert': #333333,
+    'dark-grey': #333333,
+    'grey': #333333,
+    'white': #333333,
+    'off-black': #333333,
+);
+
+@function color($key, $option: opacity, $flex-val: null) {
+  @if $option == opacity {
+    @if $flex-val == null {
+      $flex-val: 1;
+    }
+    @if map-has-key($app-colors, $key) {
+      @return rgba(map-get($app-colors, $key), $flex-val);
+    }
+
+    @warn "Unknown `#{key}` in colors"
+  } @else if $option == lighten {
+    @if $flex-val == null {
+      $flex-val: 15%;
+    }
+    @if map-has-key($app-colors, $key) {
+      @return lighten(rgba(map-get($app-colors, $key), 1), $flex-val);
+    }
+
+    @warn "Unknown `#{key}` in colors"
+  } @else {
+    @warn "Unsuported option"
+  }
+}
