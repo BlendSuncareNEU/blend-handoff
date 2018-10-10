@@ -1,12 +1,13 @@
 import React from 'react';
 
-import Header from '../../components/header/header';
+import HeaderContainer from '../../components/header/header-container';
+import Footer from '../../components/footer/footer';
 
 import '../../styles/pages/home.scss';
 
 const Home = () => (
   <div className="page-wrapper page-home__div__wrapper">
-    <Header />
+    <HeaderContainer />
 
     <section className="page-home__section__container-splash">
       <h2 className="page-home__h2__splash-header">Meet Blend</h2>
@@ -182,6 +183,8 @@ const Home = () => (
         </div>
       </div>
     </section>
+
+    <Footer />
   </div>
 );
 
