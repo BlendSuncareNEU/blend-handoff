@@ -1,9 +1,19 @@
+@import '../mixins/_breakpoints.scss';
+
 .component-footer__footer__wrapper {
   padding: 4rem 8rem 3rem 8rem;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+
+  @include breakpoint('tablet') {
+    padding: 4rem 4rem 3rem 4rem;
+  }
+
+  @include breakpoint('mobile', 'phablet') {
+    flex-direction: column;
+  }
 
   .component-footer__span__copy-text {
     font-family: 'Merriweather Sans', serif;
@@ -14,6 +24,10 @@
 
   .component-footer__nav__container-page-navigation {
     margin-left: auto;
+
+    @include breakpoint('mobile', 'phablet') {
+      margin:  2rem 0;
+    }
 
     a {
       padding: 0 .75rem;
@@ -31,8 +45,16 @@
     align-items: center;
     margin-left: auto;
 
+    @include breakpoint('mobile', 'phablet') {
+      margin: 0;
+    }
+
     .component-footer__a__link-social {
       padding: 0 .5rem;
+
+      @include breakpoint('mobile', 'phablet') {
+        padding: 0 1rem;
+      }
     }
   }
 }
