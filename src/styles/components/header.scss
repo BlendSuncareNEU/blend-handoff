@@ -1,11 +1,27 @@
 .component-header__header__wrapper {
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   width: 100%;
-  padding: 4rem 0;
+  padding: 4rem 8rem;
+  position: absolute;
+  top: 0;
 
   .component-header__h1__temp-brand-mark {
+    margin-right: auto;
     font-family: 'Merriweather', serif;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: 300;
+    color: #4C4C4C;
+  }
+
+  .component-header__nav__navigation-page {
+    margin-left: auto;
+  }
+
+  .component-header__img__icon-navigation {
+    width: 1.3rem;
+    cursor: pointer;
   }
 }

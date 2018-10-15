@@ -1,0 +1,38 @@
+.component-footer__footer__wrapper {
+  padding: 4rem 8rem 3rem 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  .component-footer__span__copy-text {
+    font-family: 'Merriweather Sans', serif;
+    font-size: .95rem;
+    font-weight: 300;
+    color: #888888;
+  }
+
+  .component-footer__nav__container-page-navigation {
+    margin-left: auto;
+
+    a {
+      padding: 0 .75rem;
+      font-family: 'Merriweather Sans', serif;
+      font-size: .95rem;
+      font-weight: 300;
+      text-decoration: none;
+      color: #888888;
+    }
+  }
+
+  .component-footer__nav__container-social-navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+
+    .component-footer__a__link-social {
+      padding: 0 .5rem;
+    }
+  }
+}

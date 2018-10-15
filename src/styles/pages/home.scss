@@ -1,1 +1,291 @@
 
+// SHARED STYLES
+
+.page-home__section__container-features, .page-home__section__container-ingredients,
+.page-home__section__container-reviews, .page-home__section__container-learn {
+  padding: 5rem 0 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .page-home__h2__features-container-header, .page-home__h2__ingredients-container-header,
+  .page-home__h2__reviews-container-header, .page-home__h2__learn-container-header{
+    margin-bottom: 1.25rem;
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+
+  .page-home__p__features-container-subtext, .page-home__p__ingredients-container-subtext,
+  .page-home__p__reviews-container-subtext, .page-home__p__learn-container-subtext {
+    width: 40rem;
+    margin-bottom: 3rem;
+    line-height: 1.5rem;
+    font-family: 'Merriweather Sans', serif;
+    font-size: .95rem;
+    font-weight: 300;
+    text-align: center;
+    color: #979797;
+  }
+}
+
+// INDIVIDUAL STYLES
+
+.page-home__section__container-splash {
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FBFBFB;
+
+  .page-home__h2__splash-header {
+    margin-bottom: 1.25rem;
+    font-family: 'Merriweather', serif;
+    font-size: 3.2rem;
+    font-weight: 300;
+  }
+
+  .page-home__p__splash-subtext {
+    width:45rem;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+    font-family: 'Merriweather Sans', serif;
+    font-size: .95rem;
+    font-weight: 300;
+    text-align: center;
+    color: #BABABA;
+  }
+
+  .page-home__a__link-shop {
+    padding: 1rem 2.5rem;
+    border-radius: .25rem;
+    font-family: 'Merriweather Sans', serif;
+    font-size: .85rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    background-color: #4A4A4A;
+  }
+}
+
+.page-home__section__container-features {
+
+  .page-home__div__wrapper-features-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .page-home__div__container-feature-element {
+      width: 17.5rem;
+      padding: 0 2rem;
+
+      .page-home__img__icon-reef-safe, .page-home__img__icon-white-cast, .page-home__img__icon-organic-filters {
+        display: block;
+        width: 3rem;
+        margin: 0 auto 1.25rem auto;
+      }
+
+      .page-home__img__icon-white-cast {
+        width: 3.5rem;
+        margin: 0 auto 2rem auto;
+      }
+
+      .page-home__h3__feature-header {
+        margin-bottom: 1rem;
+        font-family: 'Merriweather', serif;
+        font-size: 1.1rem;
+        font-weight: 300;
+        word-spacing: 2px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #333333;
+      }
+
+      .page-home__p__feature-text {
+        font-family: 'Merriweather Sans', serif;
+        font-size: .85rem;
+        font-weight: 300;
+        line-height: 1.5rem;
+        letter-spacing: 1px;
+        text-align: center;
+        color: #848484;
+      }
+    }
+  }
+ }
+
+.page-home__section__container-ingredients {
+  background-color: #FBFBFB;
+
+  .page-home__div__wrapper-ingredients-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2.5rem;
+
+    .page-home__div__wrapper-ingredients-col {
+      width: 17.5rem;
+      padding: 0 2rem;
+
+      .page-home__div__container-ingredient-element {
+        padding: 2rem 0;
+
+        .page-home__h3__ingredient-header {
+          margin-bottom: 1rem;
+          font-family: 'Merriweather', serif;
+          font-size: 1.1rem;
+          font-weight: 300;
+          word-spacing: 2px;
+          text-align: center;
+          color: #333333;
+        }
+
+        .page-home__p__ingredient-text {
+          font-family: 'Merriweather Sans', serif;
+          font-size: .85rem;
+          font-weight: 300;
+          line-height: 1.5rem;
+          letter-spacing: 1px;
+          text-align: center;
+          color: #848484;
+        }
+      }
+    }
+
+    .page-home__div__wrapper-ingredients-image-col {
+      width: 12rem;
+      padding: 0 2rem;
+
+      .page-home__img__image-ingredients {
+        display: block;
+        width: 7.25rem;
+        margin: auto;
+      }
+    }
+  }
+
+  .page-home__a__learn-more-link {
+    padding: 1rem 2.5rem;
+    border-radius: .25rem;
+    font-family: 'Merriweather Sans', serif;
+    font-size: .85rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    background-color: #4A4A4A;
+  }
+}
+
+.page-home__section__container-reviews {
+
+  .page-home__div__wrapper-reviews-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+
+    .page-home__div__container-review-element {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      width: 22rem;
+      padding: 2rem 1rem;
+
+      .page-home__img__icon-quote {
+        margin-right: 1rem;
+      }
+
+      .page-home__p__review-text {
+        font-family: 'Merriweather Sans', serif;
+        font-size: .95rem;
+        font-weight: 300;
+        line-height: 1.5rem;
+        letter-spacing: 1px;
+        color: #848484;
+      }
+    }
+
+    .page-home__div__container-middle-element {
+      padding: 2rem 2rem;
+      background-image: url("../../assets/backgrounds/review-background.png");
+      // background-size: contain;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+
+      .page-home__p__review-text {
+        font-family: 'Merriweather Sans', serif;
+        font-size: .95rem;
+        font-weight: 300;
+        line-height: 1.5rem;
+        letter-spacing: 1px;
+        color: #000000;
+      }
+    }
+  }
+
+  .page-home__div__container-review-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 25rem;
+    margin: auto;
+
+    .page-home__img__icon-user {
+      margin-right: 1rem;
+    }
+
+    .page-home__span__user-name {
+      font-family: 'Merriweather', serif;
+      font-size: 1rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.page-home__section__container-learn {
+  background-color: #FBFBFB;
+
+  .page-home__div__wrapper-learn-row {
+    display: flex;
+    flex-direction: row;
+
+    .page-home__div__container-learn-element {
+      width: 18rem;
+      padding: 2rem;
+
+      .page-home__img__image-learn-placeholder {
+        display: block;
+        width: 18rem;
+        margin: 0 auto 1.5rem auto;
+      }
+
+      .page-home__h3__learn-header {
+        margin-bottom: 1rem;
+        line-height: 1.5rem;
+        font-family: 'Merriweather', serif;
+        font-size: 1.1rem;
+        font-weight: 300;
+        word-spacing: 2px;
+        text-align: center;
+        color: #333333;
+      }
+
+      .page-home__p__learn-text {
+        font-family: 'Merriweather Sans', serif;
+        font-size: .85rem;
+        font-weight: 300;
+        line-height: 1.5rem;
+        letter-spacing: 1px;
+        text-align: center;
+        color: #848484;
+      }
+    }
+  }
+}
