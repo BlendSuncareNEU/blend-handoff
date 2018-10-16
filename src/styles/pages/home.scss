@@ -112,6 +112,10 @@
         margin-bottom: 2rem;
       }
 
+      @include breakpoint('phablet') {
+        width: 20rem;
+      }
+
       @include breakpoint('tablet') {
         width: 13rem;
         padding: 0 1.5rem;
@@ -167,12 +171,36 @@
     align-items: center;
     margin-bottom: 2.5rem;
 
+    @include breakpoint('mobile', 'phablet') {
+      flex-direction: column;
+    }
+
+    .page-home__div__wrapper-horizontal-image-col {
+      display: none;
+
+      @include breakpoint('mobile', 'phablet') {
+        display: block;
+        width: 70%;
+        margin-bottom: 1rem;
+      }
+
+      .page-home__img__image-tube-horizontal {
+        display: block;
+        width: 100%;
+        margin: auto;
+      }
+    }
+
     .page-home__div__wrapper-ingredients-col {
       width: 17.5rem;
       padding: 0 2rem;
 
       @include breakpoint('tablet') {
         width: 13rem;
+      }
+
+      @include breakpoint('mobile', 'phablet') {
+        width: 20rem;
       }
 
       .page-home__div__container-ingredient-element {
@@ -204,6 +232,10 @@
       width: 12rem;
       padding: 0 2rem;
 
+      @include breakpoint('mobile', 'phablet') {
+        display: none;
+      }
+
       .page-home__img__image-ingredients {
         display: block;
         width: 7.25rem;
@@ -230,14 +262,22 @@
   .page-home__div__wrapper-reviews-row {
     display: flex;
     flex-direction: row;
-    margin-bottom: 1rem;
+
+    @include breakpoint('tablet', 'phablet', 'mobile') {
+      flex-direction: column;
+    }
 
     .page-home__div__container-review-element {
+      box-sizing: border-box;
       display: flex;
       flex-direction: row;
       align-items: flex-start;
-      width: 22rem;
-      padding: 2rem 1rem 3rem 1rem;
+      width: 20rem;
+      padding: 2rem 0 3rem 0;
+
+      @include breakpoint('tablet') {
+        width: 25rem;
+      }
 
       .page-home__img__icon-quote {
         margin-right: 1rem;
@@ -254,11 +294,56 @@
     }
 
     .page-home__div__container-middle-element {
-      //padding: 2rem 2rem;
+      flex-direction: column;
+      margin: 0 2rem;
+
+      @include breakpoint('tablet') {
+        margin: 0;
+      }
+
+      .page-home__div__container-review-user {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 1rem;
+
+        @include breakpoint('tablet') {
+          justify-content: center;
+          margin: 0 0 0 -2rem;
+        }
+
+        .page-home__img__icon-user {
+          margin-right: 1rem;
+        }
+
+        .page-home__span__user-name {
+          font-family: 'Merriweather', serif;
+          font-size: 1rem;
+          font-weight: 300;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .page-home__div__container-middle-element-comment {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      width: 20rem;
+      padding: 2rem 1rem 3rem 1rem;
       background-image: url("../../assets/backgrounds/review-background.png");
-      // background-size: contain;
       background-size: 100% 100%;
       background-repeat: no-repeat;
+
+      @include breakpoint('tablet') {
+        background-image: none;
+        width: 25rem;
+      }
+
+      .page-home__img__icon-quote {
+        margin-right: 1rem;
+      }
 
       .page-home__p__review-text {
         font-family: 'Merriweather Sans', serif;
@@ -268,26 +353,6 @@
         letter-spacing: 1px;
         color: #000000;
       }
-    }
-  }
-
-  .page-home__div__container-review-user {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 25rem;
-    margin: auto;
-
-    .page-home__img__icon-user {
-      margin-right: 1rem;
-    }
-
-    .page-home__span__user-name {
-      font-family: 'Merriweather', serif;
-      font-size: 1rem;
-      font-weight: 300;
-      letter-spacing: 2px;
-      text-transform: uppercase;
     }
   }
 }

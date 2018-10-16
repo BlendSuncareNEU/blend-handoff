@@ -7,6 +7,7 @@ import reefSafeIcon from '../../assets/icons/coral-icon.png';
 import noWhiteCastIcon from '../../assets/icons/sunglasses-icon.png';
 import organicFiltersIcon from '../../assets/icons/leaf-icon.png';
 import ingredientsImage from '../../assets/icons/tube-icon.png';
+import ingredientsHorizontalImage from '../../assets/icons/tube-horizontal-icon.png';
 import quoteIcon from '../../assets/icons/quotes-icon.png';
 import userIcon from '../../assets/icons/user-icon.png';
 import learnPlaceholderImage from '../../assets/icons/placeholder-icon.png';
@@ -77,6 +78,14 @@ const Home = () => (
       </p>
 
       <div className="page-home__div__wrapper-ingredients-row">
+        <div className="page-home__div__wrapper-horizontal-image-col">
+          <img
+            src={ingredientsHorizontalImage}
+            alt="Blend Sunscreen"
+            className="page-home__img__image-tube-horizontal"
+          />
+        </div>
+
         <div className="page-home__div__wrapper-ingredients-col">
           <div className="page-home__div__container-ingredient-element">
             <h3 className="page-home__h3__ingredient-header">First One</h3>
@@ -97,7 +106,11 @@ const Home = () => (
         </div>
 
         <div className="page-home__div__wrapper-ingredients-image-col">
-          <img src={ingredientsImage} className="page-home__img__image-ingredients" />
+          <img
+            src={ingredientsImage}
+            alt="Blend Sunscreen"
+            className="page-home__img__image-ingredients"
+          />
         </div>
 
         <div className="page-home__div__wrapper-ingredients-col">
@@ -142,12 +155,19 @@ const Home = () => (
           </p>
         </div>
 
-        <div className="page-home__div__container-review-element page-home__div__container-middle-element">
-          <img src={quoteIcon} alt="" className="page-home__img__icon-quote" />
-          <p className="page-home__p__review-text">
-            Business-to-consumer twitter quity vesting period social media
-            research &amp; development ramen.
-          </p>
+        <div className="page-home__div__container-middle-element">
+          <div className="page-home__div__container-middle-element-comment">
+            <img src={quoteIcon} alt="" className="page-home__img__icon-quote" />
+            <p className="page-home__p__review-text">
+              Business-to-consumer twitter quity vesting period social media
+              research &amp; development ramen.
+            </p>
+          </div>
+
+          <div className="page-home__div__container-review-user">
+            <img src={userIcon} alt="" className="page-home__img__icon-user" />
+            <span className="page-home__span__user-name">John Kane, 67</span>
+          </div>
         </div>
 
         <div className="page-home__div__container-review-element">
@@ -157,10 +177,6 @@ const Home = () => (
             research &amp; development ramen.
           </p>
         </div>
-      </div>
-      <div className="page-home__div__container-review-user">
-        <img src={userIcon} alt="" className="page-home__img__icon-user" />
-        <span className="page-home__span__user-name">John Kane, 67</span>
       </div>
     </section>
 
