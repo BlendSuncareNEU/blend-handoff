@@ -1,5 +1,10 @@
 import React from 'react';
 
+import facebookIcon from '../../assets/icons/social/facebook-icon.png';
+import googlePlusIcon from '../../assets/icons/social/google-plus-icon.png';
+import instagramIcon from '../../assets/icons/social/instagram-icon.png';
+import twitterIcon from '../../assets/icons/social/twitter-icon.png';
+
 import '../../styles/components/footer.scss';
 
 const Footer = () => (
@@ -14,7 +19,18 @@ const Footer = () => (
     </nav>
 
     <nav className="component-footer__nav__container-social-navigation">
-      /* social links here */
+      <a href="#" className="component-footer__a__link-social">
+        <img src={twitterIcon} alt="" className="component-footer__img__icon-social" />
+      </a>
+      <a href="#" className="component-footer__a__link-social">
+        <img src={facebookIcon} alt="" className="component-footer__img__icon-social" />
+      </a>
+      <a href="#" className="component-footer__a__link-social">
+        <img src={googlePlusIcon} alt="" className="component-footer__img__icon-social" />
+      </a>
+      <a href="#" className="component-footer__a__link-social">
+        <img src={instagramIcon} alt="" className="component-footer__img__icon-social" />
+      </a>
     </nav>
   </footer>
 );
