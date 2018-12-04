@@ -33,9 +33,6 @@ const Header = ({ toggleMobileNavigation, displayMobileNavigation }) => (
         onClick={toggleMobileNavigation}
       />
       <a href="#" className="component-header__a__page-link">
-        Product
-      </a>
-      <a href="#" className="component-header__a__page-link">
         About Us
       </a>
       <a href="#" className="component-header__a__page-link">
