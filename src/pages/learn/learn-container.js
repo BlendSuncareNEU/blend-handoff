@@ -12,7 +12,7 @@ class LearnContainer extends React.Component {
   }
 
   render() {
-    return <Learn />;
+    return <Learn data={this.props.doc.data} />;
   }
 }
 

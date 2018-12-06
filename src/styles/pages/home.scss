@@ -496,6 +496,10 @@
       flex-direction: column;
     }
 
+    a {
+      text-decoration: none;
+    }
+
     .page-home__div__container-learn-element {
       width: 18rem;
       padding: 2rem;
@@ -544,6 +548,7 @@
         font-weight: 600;
         word-spacing: 2px;
         text-align: center;
+        text-decoration: none;
         text-transform: uppercase;
         color: #1b1146;
 
@@ -559,6 +564,7 @@
         line-height: 1.5rem;
         letter-spacing: 1px;
         text-align: center;
+        text-decoration: none;
         color: #1b1146;
       }
     }

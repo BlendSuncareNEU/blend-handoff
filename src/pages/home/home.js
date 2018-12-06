@@ -1,5 +1,6 @@
 import React from 'react';
 import { RichText } from 'prismic-reactjs';
+import { Link } from 'react-router-dom';
 
 import HeaderContainer from '../../components/header/header-container';
 import Footer from '../../components/footer/footer';
@@ -210,47 +211,53 @@ const Home = ({
       </p>
 
       <div className="page-home__div__wrapper-learn-row">
-        <div className="page-home__div__container-learn-element">
-          <img
-            src={data.learn_image_01.url}
-            alt={data.learn_image_01.alt}
-            className="page-home__img__image-learn-icon"
-          />
-          <h3 className="page-home__h3__learn-header">
-            {RichText.asText(data.learn_element_header_01)}
-          </h3>
-          <p className="page-home__p__learn-text">
-            {RichText.asText(data.learn_element_desc_01)}
-          </p>
-        </div>
+        <Link to="/article/learn-01">
+          <div className="page-home__div__container-learn-element">
+            <img
+              src={data.learn_image_01.url}
+              alt={data.learn_image_01.alt}
+              className="page-home__img__image-learn-icon"
+            />
+            <h3 className="page-home__h3__learn-header">
+              {RichText.asText(data.learn_element_header_01)}
+            </h3>
+            <p className="page-home__p__learn-text">
+              {RichText.asText(data.learn_element_desc_01)}
+            </p>
+          </div>
+        </Link>
 
-        <div className="page-home__div__container-learn-element">
-          <img
-            src={data.learn_image_02.url}
-            alt={data.learn_image_02.alt}
-            className="page-home__img__image-learn-icon"
-          />
-          <h3 className="page-home__h3__learn-header">
-            {RichText.asText(data.learn_element_header_02)}
-          </h3>
-          <p className="page-home__p__learn-text">
-            {RichText.asText(data.learn_element_desc_02)}
-          </p>
-        </div>
+        <Link to="/article/learn-02">
+          <div className="page-home__div__container-learn-element">
+            <img
+              src={data.learn_image_02.url}
+              alt={data.learn_image_02.alt}
+              className="page-home__img__image-learn-icon"
+            />
+            <h3 className="page-home__h3__learn-header">
+              {RichText.asText(data.learn_element_header_02)}
+            </h3>
+            <p className="page-home__p__learn-text">
+              {RichText.asText(data.learn_element_desc_02)}
+            </p>
+          </div>
+        </Link>
 
-        <div className="page-home__div__container-learn-element">
-          <img
-            src={data.learn_image_03.url}
-            alt={data.learn_image_03.alt}
-            className="page-home__img__image-learn-icon"
-          />
-          <h3 className="page-home__h3__learn-header">
-            {RichText.asText(data.learn_element_header_03)}
-          </h3>
-          <p className="page-home__p__learn-text">
-            {RichText.asText(data.learn_element_desc_03)}
-          </p>
-        </div>
+        <Link to="/article/learn-03">
+          <div className="page-home__div__container-learn-element">
+            <img
+              src={data.learn_image_03.url}
+              alt={data.learn_image_03.alt}
+              className="page-home__img__image-learn-icon"
+            />
+            <h3 className="page-home__h3__learn-header">
+              {RichText.asText(data.learn_element_header_03)}
+            </h3>
+            <p className="page-home__p__learn-text">
+              {RichText.asText(data.learn_element_desc_03)}
+            </p>
+          </div>
+        </Link>
       </div>
     </section>
 
