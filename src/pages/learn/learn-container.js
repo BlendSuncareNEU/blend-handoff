@@ -1,17 +1,18 @@
 import React from 'react';
 import { PrismicPage } from 'prismic-react-router';
 
-// import About from './about';
+import Learn from './learn';
 
 class LearnContainer extends React.Component {
   static pageType = 'learn';
 
   constructor(props) {
     super(props);
+    console.log(props);
   }
 
   render() {
-    return;
+    return <Learn />;
   }
 }
 
