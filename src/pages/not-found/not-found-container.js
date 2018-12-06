@@ -4,7 +4,7 @@ import { PrismicPage } from 'prismic-react-router';
 import NotFound from './not-found';
 
 class NotFoundContainer extends React.Component {
-  static pageType = 'notFound';
+  static pageType = 'notfound';
 
   constructor(props) {
     super(props);

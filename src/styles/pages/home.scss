@@ -164,6 +164,7 @@
     margin-top: 7rem;
     margin-left: 4.5rem;
     width: 25rem;
+    z-index: 100;
 
     @include breakpoint('tablet', 'phablet') {
       width: 24rem;
@@ -305,9 +306,11 @@
       background-size: cover;
     }
 
-    .page-home__a__learn-more-link {
+    .page-home__button__learn-more-link {
       padding: 1rem 2.5rem;
       margin: auto;
+      border: none;
+      outline: none;
       font-family: 'Merriweather Sans', serif;
       font-size: .95rem;
       font-weight: 600;
@@ -316,6 +319,7 @@
       text-transform: uppercase;
       color: white;
       background-color: #1E3C7C;
+      cursor: pointer;
     }
   }
 
@@ -423,6 +427,60 @@
       left: 0;
       top: 82.5%;
     }
+  }
+}
+
+.page-home__section__hidden-ingredients-overlay {
+  display: none;
+}
+
+.page-home__section__visible-ingredients-overlay {
+  box-sizing: border-box;
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  width: 45rem;
+  max-height: 100vh;
+  overflow: scroll;
+  padding: 3rem 4rem;
+  border: .2rem solid #1b1146;
+  background-color: rgba(255,255,255,.975);
+
+  @include breakpoint('phablet', 'mobile') {
+    width: 100%;
+    height: 100vh;
+    border: none;
+  }
+
+  .page-home__img__icon-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 1rem;
+    cursor: pointer;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    line-height: 3rem;
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    color: #1B1146;
+  }
+
+  p {
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+    font-family: 'Merriweather Sans', serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #353535;
   }
 }
 

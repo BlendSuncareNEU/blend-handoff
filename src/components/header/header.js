@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 import BrandWordmark from '../../assets/icons/brand-wordmark.png';
 import MenuIcon from '../../assets/icons/menu-icon.png';
@@ -8,11 +10,13 @@ import '../../styles/components/header.scss';
 
 const Header = ({ toggleMobileNavigation, displayMobileNavigation }) => (
   <header className="component-header__header__wrapper">
-    <img
-      src={BrandWordmark}
-      alt="Blend"
-      className="component-header__img__icon-wordmark"
-    />
+    <Link to="/">
+      <img
+        src={BrandWordmark}
+        alt="Blend"
+        className="component-header__img__icon-wordmark"
+      />
+    </Link>
     <img
       src={MenuIcon}
       alt="Menu"
@@ -32,12 +36,12 @@ const Header = ({ toggleMobileNavigation, displayMobileNavigation }) => (
         className="component-header__img__icon-close"
         onClick={toggleMobileNavigation}
       />
-      <a href="#" className="component-header__a__page-link">
+      <Link to="/about-us" className="component-header__a__page-link">
         About Us
-      </a>
-      <a href="#" className="component-header__a__page-link">
+      </Link>
+      <HashLink to="/#learn-section" className="component-header__a__page-link">
         Learn
-      </a>
+      </HashLink>
     </nav>
   </header>
 );

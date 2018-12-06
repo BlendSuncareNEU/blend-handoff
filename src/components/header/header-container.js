@@ -17,7 +17,6 @@ class HeaderContainer extends React.Component {
     this.setState({
       displayMobileNavigation: !this.state.displayMobileNavigation,
     });
-    console.log('toggle clicked');
   }
 
   render() {

@@ -14,10 +14,15 @@ import birdSmall from '../../assets/images/bird-small.png';
 import ingredientsImage from '../../assets/images/sunscreen-bottle.png';
 import ingredientsHorizontalImage from '../../assets/images/sunscreen-bottle-horizontal.png';
 import sunscreenArm from '../../assets/images/hand.png';
+import CloseIcon from '../../assets/icons/close.png';
 
 import '../../styles/pages/home.scss';
 
-const Home = ({ data }) => (
+const Home = ({
+  data,
+  displayIngredientsOverlay,
+  toggleIngredientsOverlay,
+}) => (
   <div className="page-wrapper page-home__div__wrapper">
     <HeaderContainer />
 
@@ -29,9 +34,17 @@ const Home = ({ data }) => (
         <p className="page-home__p__splash-subtext">
           {RichText.asText(data.splash_subtext)}
         </p>
-        <a href="#" className="page-home__a__link-shop">
-          Shop Blend
-        </a>
+        {data.splash_cta_link.url ? (
+          <a
+            href={data.splash_cta_link.url}
+            target={data.splash_cta_link.target}
+            className="page-home__a__link-shop"
+          >
+            Shop Blend
+          </a>
+        ) : (
+          ''
+        )}
       </div>
 
       <img src={birdSmall} className="page-home__img__bird-small" />
@@ -101,16 +114,19 @@ const Home = ({ data }) => (
         <p className="page-home__p__ingredients-container-subtext">
           {RichText.asText(data.ingredients_subtext)}
         </p>
-        <a href="#" className="page-home__a__learn-more-link">
+        <button
+          className="page-home__button__learn-more-link"
+          onClick={toggleIngredientsOverlay}
+        >
           Learn More
-        </a>
+        </button>
       </div>
 
       <div className="page-home__div__container-ingredients-body">
         <div className="page-home__div__wrapper-horizontal-image-col">
           <img
-            src={data.ingredients_image_bottle_horizontal.url}
-            alt={data.ingredients_image_bottle_horizontal.alt}
+            src={ingredientsHorizontalImage}
+            alt="Blend Sunscreen"
             className="page-home__img__image-tube-horizontal"
           />
         </div>
@@ -137,8 +153,8 @@ const Home = ({ data }) => (
 
         <div className="page-home__div__wrapper-ingredients-image-col">
           <img
-            src={data.ingredients_image_bottle_vertical.url}
-            alt={data.ingredients_image_bottle_vertical.alt}
+            src={ingredientsImage}
+            alt="Blend Sunscreen"
             className="page-home__img__image-ingredients"
           />
         </div>
@@ -166,7 +182,26 @@ const Home = ({ data }) => (
       <img src={sunscreenArm} className="page-home__img__image-arm" />
     </section>
 
-    <section className="page-home__section__container-learn">
+    <section
+      className={
+        displayIngredientsOverlay
+          ? 'page-home__section__visible-ingredients-overlay'
+          : 'page-home__section__hidden-ingredients-overlay'
+      }
+    >
+      <img
+        src={CloseIcon}
+        alt="Close"
+        className="page-home__img__icon-close"
+        onClick={toggleIngredientsOverlay}
+      />
+      <h2>All Ingredients</h2>
+      <p>{RichText.asText(data.ingredients_overlay_full_ingredients)}</p>
+      <h2>About Ingredients</h2>
+      <p>{RichText.asText(data.ingredients_overlay_about_ingredients)}</p>
+    </section>
+
+    <section className="page-home__section__container-learn" id="learn-section">
       <h2 className="page-home__h2__learn-container-header">
         {RichText.asText(data.learn_header)}
       </h2>
