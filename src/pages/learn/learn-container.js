@@ -1,5 +1,5 @@
 import React from 'react';
-import { PrismicPage } from 'prismic-react-router';
+import PrismicPageV2 from '../../prismic/prismic-page';
 
 import Learn from './learn';
 
@@ -16,4 +16,4 @@ class LearnContainer extends React.Component {
   }
 }
 
-export default PrismicPage(LearnContainer);
+export default PrismicPageV2(LearnContainer);
