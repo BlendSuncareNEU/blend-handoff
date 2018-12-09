@@ -1,83 +1,129 @@
 import React from 'react';
+import { RichText } from 'prismic-reactjs';
+import { Link } from 'react-router-dom';
 
 import HeaderContainer from '../../components/header/header-container';
 import Footer from '../../components/footer/footer';
 
-import reefSafeIcon from '../../assets/icons/coral-icon.png';
-import noWhiteCastIcon from '../../assets/icons/sunglasses-icon.png';
-import organicFiltersIcon from '../../assets/icons/leaf-icon.png';
-import ingredientsImage from '../../assets/icons/tube-icon.png';
-import ingredientsHorizontalImage from '../../assets/icons/tube-horizontal-icon.png';
-import quoteIcon from '../../assets/icons/quotes-icon.png';
-import userIcon from '../../assets/icons/user-icon.png';
-import learnPlaceholderImage from '../../assets/icons/placeholder-icon.png';
+import splashPalm from '../../assets/images/header-palm.png';
+import bottomWave from '../../assets/images/bottom-wave.png';
+import splashMan from '../../assets/images/man.png';
+import splashWoman from '../../assets/images/woman.png';
+import splashChild from '../../assets/images/child.png';
+import birdLarge from '../../assets/images/bird-large.png';
+import birdSmall from '../../assets/images/bird-small.png';
+import ingredientsImage from '../../assets/images/sunscreen-bottle.png';
+import ingredientsHorizontalImage from '../../assets/images/sunscreen-bottle-horizontal.png';
+import sunscreenArm from '../../assets/images/hand.png';
+import CloseIcon from '../../assets/icons/close.png';
 
 import '../../styles/pages/home.scss';
 
-const Home = () => (
+const Home = ({
+  data,
+  displayIngredientsOverlay,
+  toggleIngredientsOverlay,
+}) => (
   <div className="page-wrapper page-home__div__wrapper">
     <HeaderContainer />
 
-    <section className="page-home__section__container-splash">
-      <h2 className="page-home__h2__splash-header">Meet Blend</h2>
-      <p className="page-home__p__splash-subtext">
-        The only total solar protectant created with both you, and the
-        environment in mind. Hella cupidatat ugh tofu succulents. Tempor tote
-        bag snackwave polaroid officia. Subway tile est thundercats, neutra
-        direct trade elit chicharrones trust fund.
-      </p>
-      <a href="#" className="page-home__a__link-shop">
-        Shop Blend
-      </a>
+    <section className="page-home__section__wrapper-splash">
+      <div className="page-home__div__container-splash-text">
+        <h2 className="page-home__h2__splash-header">
+          {RichText.asText(data.splash_header)}
+        </h2>
+        <p className="page-home__p__splash-subtext">
+          {RichText.asText(data.splash_subtext)}
+        </p>
+        {data.splash_cta_link.url ? (
+          <a
+            href={data.splash_cta_link.url}
+            target={data.splash_cta_link.target}
+            className="page-home__a__link-shop"
+          >
+            Shop Blend
+          </a>
+        ) : (
+          ''
+        )}
+      </div>
+
+      <img src={birdSmall} className="page-home__img__bird-small" />
+      <img src={birdLarge} className="page-home__img__bird-large" />
+      <img src={splashMan} className="page-home__img__man" />
+      <img src={splashWoman} className="page-home__img__woman" />
+      <img src={splashChild} className="page-home__img__child" />
+      <img src={splashPalm} className="page-home__img__palm-tree" />
+      <img src={bottomWave} className="page-home__img__bottom-wave" />
     </section>
 
     <section className="page-home__section__container-features">
-      <h2 className="page-home__h2__features-container-header">Features</h2>
-      <p className="page-home__p__features-container-subtext">
-        Entrepreneur creative iPad niche market launch party hypotheses
-        hackathon ecosystem stealth focus conversion social media adviser.
-      </p>
+      <h2 className="page-home__h2__features-container-header">
+        {RichText.asText(data.features_header)}
+      </h2>
 
       <div className="page-home__div__wrapper-features-row">
         <div className="page-home__div__container-feature-element">
-          <img src={reefSafeIcon} className="page-home__img__icon-reef-safe" />
-          <h3 className="page-home__h3__feature-header">Reef Safe</h3>
+          <img
+            src={data.feature_image_01.url}
+            alt={data.feature_image_01.alt}
+            className="page-home__img__icon-reef-safe"
+          />
+          <h3 className="page-home__h3__feature-header">
+            {RichText.asText(data.feature_element_header_01)}
+          </h3>
           <p className="page-home__p__feature-text">
-            In cray magna, keffiyeh dreamcatcher normcore id nisi sartorial
-            schlitz portland banjo crucifix health goth.
+            {RichText.asText(data.feature_element_desc_01)}
           </p>
         </div>
 
         <div className="page-home__div__container-feature-element">
-          <img src={noWhiteCastIcon} className="page-home__img__icon-white-cast" />
-          <h3 className="page-home__h3__feature-header">No White Cast</h3>
+          <img
+            src={data.feature_image_02.url}
+            alt={data.feature_image_02.alt}
+            className="page-home__img__icon-white-cast"
+          />
+          <h3 className="page-home__h3__feature-header">
+            {RichText.asText(data.feature_element_header_02)}
+          </h3>
           <p className="page-home__p__feature-text">
-            In cray magna, keffiyeh dreamcatcher normcore id nisi sartorial
-            schlitz portland banjo crucifix health goth.
+            {RichText.asText(data.feature_element_desc_02)}
           </p>
         </div>
 
         <div className="page-home__div__container-feature-element">
-          <img src={organicFiltersIcon} className="page-home__img__icon-organic-filters" />
-          <h3 className="page-home__h3__feature-header">Organic UV Filters</h3>
+          <img
+            src={data.feature_image_03.url}
+            alt={data.feature_image_03.alt}
+            className="page-home__img__icon-organic-filters"
+          />
+          <h3 className="page-home__h3__feature-header">
+            {RichText.asText(data.feature_element_header_03)}
+          </h3>
           <p className="page-home__p__feature-text">
-            In cray magna, keffiyeh dreamcatcher normcore id nisi sartorial
-            schlitz portland banjo crucifix health goth.
+            {RichText.asText(data.feature_element_desc_03)}
           </p>
         </div>
       </div>
     </section>
 
-    <section className="page-home__section__container-ingredients">
-      <h2 className="page-home__h2__ingredients-container-header">
-        Ingredients
-      </h2>
-      <p className="page-home__p__ingredients-container-subtext">
-        Entrepreneur creative iPad niche market launch party hypotheses
-        hackathon ecosystem stealth focus conversion social media adviser.
-      </p>
+    <section className="page-home__section__wrapper-ingredients">
+      <div className="page-home__div__container-ingredients-header">
+        <h2 className="page-home__h2__ingredients-container-header">
+          {RichText.asText(data.ingredients_header)}
+        </h2>
+        <p className="page-home__p__ingredients-container-subtext">
+          {RichText.asText(data.ingredients_subtext)}
+        </p>
+        <button
+          className="page-home__button__learn-more-link"
+          onClick={toggleIngredientsOverlay}
+        >
+          Learn More
+        </button>
+      </div>
 
-      <div className="page-home__div__wrapper-ingredients-row">
+      <div className="page-home__div__container-ingredients-body">
         <div className="page-home__div__wrapper-horizontal-image-col">
           <img
             src={ingredientsHorizontalImage}
@@ -88,19 +134,20 @@ const Home = () => (
 
         <div className="page-home__div__wrapper-ingredients-col">
           <div className="page-home__div__container-ingredient-element">
-            <h3 className="page-home__h3__ingredient-header">First One</h3>
+            <h3 className="page-home__h3__ingredient-header">
+              {RichText.asText(data.ingredients_element_header_01)}
+            </h3>
             <p className="page-home__p__ingredient-text">
-              Crowdfunding network effects accelerator disruptive
-              business-to-business series A.
+              {RichText.asText(data.ingredients_element_desc_01)}
             </p>
           </div>
 
           <div className="page-home__div__container-ingredient-element">
-            <h3 className="page-home__h3__ingredient-header">Second One</h3>
+            <h3 className="page-home__h3__ingredient-header">
+              {RichText.asText(data.ingredients_element_header_02)}
+            </h3>
             <p className="page-home__p__ingredient-text">
-              Crowdfunding network effects accelerator disruptive
-              business-to-business series A financing focus agile development
-              metrics graphical user interface.
+              {RichText.asText(data.ingredients_element_desc_02)}
             </p>
           </div>
         </div>
@@ -115,123 +162,102 @@ const Home = () => (
 
         <div className="page-home__div__wrapper-ingredients-col">
           <div className="page-home__div__container-ingredient-element">
-            <h3 className="page-home__h3__ingredient-header">Third One</h3>
+            <h3 className="page-home__h3__ingredient-header">
+              {RichText.asText(data.ingredients_element_header_03)}
+            </h3>
             <p className="page-home__p__ingredient-text">
-              Crowdfunding network effects accelerator disruptive
-              business-to-business series A.
+              {RichText.asText(data.ingredients_element_desc_03)}
             </p>
           </div>
 
           <div className="page-home__div__container-ingredient-element">
-            <h3 className="page-home__h3__ingredient-header">Fourth One</h3>
+            <h3 className="page-home__h3__ingredient-header">
+              {RichText.asText(data.ingredients_element_header_04)}
+            </h3>
             <p className="page-home__p__ingredient-text">
-              Crowdfunding network effects accelerator disruptive
-              business-to-business series A financing focus agile development
-              metrics graphical user interface.
+              {RichText.asText(data.ingredients_element_desc_04)}
             </p>
           </div>
         </div>
       </div>
-      <a href="#" className="page-home__a__learn-more-link">
-        Learn More
-      </a>
+      <img src={sunscreenArm} className="page-home__img__image-arm" />
     </section>
 
-    <section className="page-home__section__container-reviews">
-      <h2 className="page-home__h2__reviews-container-header">
-        Customer Reviews
+    <section
+      className={
+        displayIngredientsOverlay
+          ? 'page-home__section__visible-ingredients-overlay'
+          : 'page-home__section__hidden-ingredients-overlay'
+      }
+    >
+      <img
+        src={CloseIcon}
+        alt="Close"
+        className="page-home__img__icon-close"
+        onClick={toggleIngredientsOverlay}
+      />
+      <h2>All Ingredients</h2>
+      <p>{RichText.asText(data.ingredients_overlay_full_ingredients)}</p>
+      <h2>About Ingredients</h2>
+      <p>{RichText.asText(data.ingredients_overlay_about_ingredients)}</p>
+    </section>
+
+    <section className="page-home__section__container-learn" id="learn-section">
+      <h2 className="page-home__h2__learn-container-header">
+        {RichText.asText(data.learn_header)}
       </h2>
-      <p className="page-home__p__reviews-container-subtext">
-        Entrepreneur creative iPad niche market launch party hypotheses
-        hackathon ecosystem stealth focus conversion social media adviser.
-      </p>
-
-      <div className="page-home__div__wrapper-reviews-row">
-        <div className="page-home__div__container-review-element">
-          <img src={quoteIcon} alt="" className="page-home__img__icon-quote" />
-          <p className="page-home__p__review-text">
-            Business-to-consumer twitter quity vesting period social media
-            research &amp; development ramen.
-          </p>
-        </div>
-
-        <div className="page-home__div__container-middle-element">
-          <div className="page-home__div__container-middle-element-comment">
-            <img src={quoteIcon} alt="" className="page-home__img__icon-quote" />
-            <p className="page-home__p__review-text">
-              Business-to-consumer twitter quity vesting period social media
-              research &amp; development ramen.
-            </p>
-          </div>
-
-          <div className="page-home__div__container-review-user">
-            <img src={userIcon} alt="" className="page-home__img__icon-user" />
-            <span className="page-home__span__user-name">John Kane, 67</span>
-          </div>
-        </div>
-
-        <div className="page-home__div__container-review-element">
-          <img src={quoteIcon} alt="" className="page-home__img__icon-quote" />
-          <p className="page-home__p__review-text">
-            Business-to-consumer twitter quity vesting period social media
-            research &amp; development ramen.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section className="page-home__section__container-learn">
-      <h2 className="page-home__h2__learn-container-header">Learn</h2>
       <p className="page-home__p__learn-container-subtext">
-        Entrepreneur creative iPad niche market launch party hypotheses
-        hackathon ecosystem stealth focus conversion social media adviser.
+        {RichText.asText(data.learn_subtext)}
       </p>
 
       <div className="page-home__div__wrapper-learn-row">
-        <div className="page-home__div__container-learn-element">
-          <img
-            src={learnPlaceholderImage}
-            alt="placeholder image"
-            className="page-home__img__image-learn-placeholder"
-          />
-          <h3 className="page-home__h3__learn-header">
-            The Importance of Sunscreen for Every Skin Tone
-          </h3>
-          <p className="page-home__p__learn-text">
-            First mover advantage ownership bootstrapping user experience
-            client. Business model canvas holy grail gamification.
-          </p>
-        </div>
+        <Link to="/article/learn-01">
+          <div className="page-home__div__container-learn-element">
+            <img
+              src={data.learn_image_01.url}
+              alt={data.learn_image_01.alt}
+              className="page-home__img__image-learn-icon"
+            />
+            <h3 className="page-home__h3__learn-header">
+              {RichText.asText(data.learn_element_header_01)}
+            </h3>
+            <p className="page-home__p__learn-text">
+              {RichText.asText(data.learn_element_desc_01)}
+            </p>
+          </div>
+        </Link>
 
-        <div className="page-home__div__container-learn-element">
-          <img
-            src={learnPlaceholderImage}
-            alt="placeholder image"
-            className="page-home__img__image-learn-placeholder"
-          />
-          <h3 className="page-home__h3__learn-header">
-            Broad Spectrum, SPF, PPD? Deciphering Sunscreen Lingo
-          </h3>
-          <p className="page-home__p__learn-text">
-            First mover advantage ownership bootstrapping user experience
-            client. Business model canvas holy grail gamification.
-          </p>
-        </div>
+        <Link to="/article/learn-02">
+          <div className="page-home__div__container-learn-element">
+            <img
+              src={data.learn_image_02.url}
+              alt={data.learn_image_02.alt}
+              className="page-home__img__image-learn-icon"
+            />
+            <h3 className="page-home__h3__learn-header">
+              {RichText.asText(data.learn_element_header_02)}
+            </h3>
+            <p className="page-home__p__learn-text">
+              {RichText.asText(data.learn_element_desc_02)}
+            </p>
+          </div>
+        </Link>
 
-        <div className="page-home__div__container-learn-element">
-          <img
-            src={learnPlaceholderImage}
-            alt="placeholder image"
-            className="page-home__img__image-learn-placeholder"
-          />
-          <h3 className="page-home__h3__learn-header">
-            Physical vs. Chemical UV filters
-          </h3>
-          <p className="page-home__p__learn-text">
-            First mover advantage ownership bootstrapping user experience
-            client. Business model canvas holy grail gamification.
-          </p>
-        </div>
+        <Link to="/article/learn-03">
+          <div className="page-home__div__container-learn-element">
+            <img
+              src={data.learn_image_03.url}
+              alt={data.learn_image_03.alt}
+              className="page-home__img__image-learn-icon"
+            />
+            <h3 className="page-home__h3__learn-header">
+              {RichText.asText(data.learn_element_header_03)}
+            </h3>
+            <p className="page-home__p__learn-text">
+              {RichText.asText(data.learn_element_desc_03)}
+            </p>
+          </div>
+        </Link>
       </div>
     </section>
 

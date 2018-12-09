@@ -1,0 +1,107 @@
+@import '../mixins/_breakpoints.scss';
+
+.page-about__section__wrapper-splash {
+  box-sizing: border-box;
+  position: relative;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(244,111,56);
+  background: linear-gradient(180deg, rgba(244,111,56,1) 0%, rgba(255,207,124,1) 50%) fixed;
+
+  .page-about__h2__splash-header {
+    margin: 0 0 1.25rem 4.55rem;
+    font-family: 'Merriweather', serif;
+    line-height: 4rem;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #1b1146;
+
+    @include breakpoint('mobile', 'phablet') {
+      margin: 0 0 1.25rem 0;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+  }
+
+  .page-about__img__bottom-wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 50;
+
+    @include breakpoint('phablet', 'mobile') {
+      bottom: 0;
+    }
+  }
+}
+
+.page-about__section__wrapper-content {
+  max-width: 50rem;
+  margin: 2rem auto 0 auto;
+
+  @include breakpoint('phablet', 'mobile', 'tablet') {
+    width: 80%;
+  }
+
+  .page-about__p__intro-text {
+    box-sizing: border-box;
+    margin-bottom: 5rem;
+    line-height: 1.5rem;
+    font-family: 'Merriweather Sans', serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #353535;
+  }
+
+  .page-about__div__wrapper-member {
+    display: flex;
+    flex-direction: row;
+    max-width: 50rem;
+    margin-bottom: 2rem;
+
+    @include breakpoint('tablet', 'phablet', 'mobile') {
+      flex-direction: column-reverse;
+    }
+
+    .page-about__img__founder-image {
+      display: block;
+      align-self: center;
+      width: 25rem;
+
+      @include breakpoint('phablet', 'mobile') {
+        width: 70%;
+        margin: auto;
+      }
+    }
+
+    .page-about__div__container-text {
+      display: flex;
+      flex-direction: column;
+      margin-left: 2rem;
+
+      @include breakpoint('tablet', 'phablet', 'mobile') {
+        margin: 0;
+      }
+
+      h2 {
+        font-family: 'Merriweather', serif;
+        line-height: 4rem;
+        font-size: 2rem;
+        font-weight: 500;
+        color: #1b1146;
+      }
+
+      p {
+        box-sizing: border-box;
+        margin-bottom: 5rem;
+        line-height: 1.5rem;
+        font-family: 'Merriweather Sans', serif;
+        font-size: 1rem;
+        font-weight: 300;
+        color: #353535;
+      }
+    }
+  }
+}

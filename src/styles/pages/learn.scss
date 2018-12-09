@@ -1,0 +1,153 @@
+@import '../mixins/_breakpoints.scss';
+
+.page-learn__section__wrapper-splash {
+  box-sizing: border-box;
+  position: relative;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(244,111,56);
+  background: linear-gradient(180deg, rgba(244,111,56,1) 0%, rgba(255,207,124,1) 50%) fixed;
+
+  h2 {
+    width: 40rem;
+    margin: 0 0 1.25rem 4.55rem;
+    font-family: 'Merriweather', serif;
+    line-height: 3.5rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #1b1146;
+  }
+
+  h3 {
+    margin: 0 0 1.25rem 4.55rem;
+    font-family: 'Merriweather Sans', serif;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #1b1146;
+  }
+
+  .page-learn__img__bottom-wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 50;
+
+    @include breakpoint('phablet', 'mobile') {
+      bottom: 0;
+    }
+  }
+}
+
+.page-learn__section__wrapper-article {
+  max-width: 50rem;
+  margin: 2rem auto 5rem auto;
+
+  @include breakpoint('phablet', 'mobile', 'tablet') {
+    width: 80%;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+    font-family: 'Merriweather Sans', serif;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #1b1146;
+  }
+
+  .article-paragraph {
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+    font-family: 'Merriweather Sans', serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #353535;
+  }
+
+  .article-image {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+}
+
+.page-learn__h2__other-articles {
+  margin-top: 4rem;
+  font-family: 'Merriweather Sans', serif;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #1b1146;
+  text-align: center;
+}
+
+.page-learn__div__wrapper-articles {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  @include breakpoint('phablet', 'mobile') {
+    flex-direction: column;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.page-learn__div__container-learn-element {
+  width: 18rem;
+  padding: 2rem;
+
+  @include breakpoint('tablet') {
+    width: 13rem;
+    padding: 2rem 1.5rem;
+  }
+
+  @include breakpoint('mobile', 'phablet') {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-learn__img__image-learn-icon {
+    display: block;
+    width: 16rem;
+    margin: 0 auto 1.5rem auto;
+
+    @include breakpoint('mobile', 'phablet') {
+      align-self: center;
+      width: 7.5rem;
+      margin: 0 0 1rem 0;
+    }
+
+    @include breakpoint('phablet') {
+      width: 12rem;
+    }
+
+    @include breakpoint('tablet') {
+      width: 13rem;
+    }
+  }
+
+  .page-learn__h3__learn-header {
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+    font-family: 'Merriweather Sans', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    word-spacing: 2px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #1b1146;
+
+    @include breakpoint('mobile', 'phablet') {
+      text-align: center;
+    }
+  }
+}

@@ -8,6 +8,6 @@ import Routes from './routes';
 import './styles/main.scss';
 
 ReactDOM.render(
-  <PrismicWrapper routes={Routes} repositoryName="blend" />,
+  <PrismicWrapper routes={Routes} repositoryName="blendsuncare" />,
   document.getElementById('root')
 );
