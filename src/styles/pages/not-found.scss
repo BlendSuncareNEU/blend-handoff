@@ -1,0 +1,102 @@
+@import '../mixins/_breakpoints.scss';
+
+.page-not-found__section__wrapper-splash {
+  box-sizing: border-box;
+  position: relative;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url("../../assets/backgrounds/splash-desktop-bg.png") no-repeat center center fixed;
+  background-size: cover;
+
+  @include breakpoint('tablet', 'phablet') {
+    background: url("../../assets/backgrounds/splash-tablet-bg.png") no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  @include breakpoint('mobile') {
+    background: url("../../assets/backgrounds/splash-mobile-bg.png") no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .page-not-found__div__container-splash-text {
+    box-sizing: border-box;
+    margin-top: 7rem;
+    margin-left: 4.5rem;
+    width: 25rem;
+    z-index: 100;
+
+    @include breakpoint('tablet', 'phablet') {
+      width: 24rem;
+    }
+
+    @include breakpoint('mobile') {
+      width: 80%;
+      margin: 0 0 0 10%;
+    }
+
+    .page-not-found__h2__splash-header {
+      margin-bottom: 1.25rem;
+      font-family: 'Merriweather', serif;
+      line-height: 4rem;
+      font-size: 3.25rem;
+      font-weight: 500;
+      color: #1b1146;
+
+      @include breakpoint('mobile') {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+      }
+    }
+
+    .page-not-found__p__splash-subtext {
+      box-sizing: border-box;
+      margin-bottom: 5rem;
+      line-height: 1.5rem;
+      font-family: 'Merriweather Sans', serif;
+      font-size: .95rem;
+      font-weight: 300;
+      color: #1b1146;
+    }
+
+    .page-not-found__a__link-home {
+      padding: 1rem 3rem;
+      font-family: 'Merriweather Sans', serif;
+      font-weight: 600;
+      font-size: .85rem;
+      letter-spacing: 1px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: white;
+      background-color: #1E3C7C;
+    }
+  }
+
+  .page-not-found__img__woman {
+    position: absolute;
+    right: 10rem;
+    bottom: 0;
+    z-index: 10;
+    width: 17.5%;
+
+    @include breakpoint('tablet') {
+      right: 2rem;
+    }
+
+    @include breakpoint('phablet', 'mobile') {
+      display: none;
+    }
+  }
+
+  .page-not-found__img__bottom-wave {
+    position: absolute;
+    bottom: -2rem;
+    width: 100%;
+    z-index: 50;
+
+    @include breakpoint('phablet', 'mobile') {
+      bottom: 0;
+    }
+  }
+}

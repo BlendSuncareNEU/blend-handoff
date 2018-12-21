@@ -1,1 +1,572 @@
+@import '../mixins/_breakpoints.scss';
 
+// SHARED STYLES
+
+.page-home__section__container-features, .page-home__section__wrapper-ingredients,
+.page-home__section__container-learn {
+  padding: 5rem 0 4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .page-home__h2__features-container-header, .page-home__h2__ingredients-container-header,
+  .page-home__h2__learn-container-header{
+    margin-bottom: 1.25rem;
+    line-height: 3rem;
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    color: #1B1146;
+
+    @include breakpoint('mobile') {
+      width: 90%;
+    }
+  }
+
+  .page-home__p__ingredients-container-subtext, .page-home__p__learn-container-subtext {
+    box-sizing: border-box;
+    width: 40rem;
+    margin-bottom: 3rem;
+    line-height: 1.5rem;
+    font-family: 'Merriweather Sans', serif;
+    font-size: .95rem;
+    font-weight: 400;
+    text-align: center;
+    color: #1B1146;;
+
+    @include breakpoint('phablet') {
+      width: 30rem;
+    }
+    @include breakpoint('mobile') {
+      width: 100%;
+      padding: 0 2rem;
+    }
+  }
+}
+
+// INDIVIDUAL STYLES
+
+.page-home__section__wrapper-splash {
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url("../../assets/backgrounds/splash-desktop-bg.png") no-repeat center center fixed;
+  background-size: cover;
+
+  @include breakpoint('tablet', 'phablet') {
+    background: url("../../assets/backgrounds/splash-tablet-bg.png") no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  @include breakpoint('mobile') {
+    background: url("../../assets/backgrounds/splash-mobile-bg.png") no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .page-home__img__palm-tree {
+    position: absolute;
+    right: 0;
+    top: 2rem;
+    z-index: 0;
+
+    @include breakpoint('tablet') {
+      right: 0;
+      top: 7rem;
+    }
+
+    @include breakpoint('phablet', 'mobile') {
+      display: none;
+    }
+  }
+
+  .page-home__img__bird-small {
+    position: absolute;
+    left: 40rem;
+    top: 17vh;
+    z-index: 10;
+    width: 2.5rem;
+
+    @include breakpoint('tablet', 'phablet', 'mobile') {
+      display: none;
+    }
+  }
+
+  .page-home__img__bird-large {
+    position: absolute;
+    left: 35rem;
+    top: 33vh;
+    z-index: 10;
+    width: 4.75rem;
+
+    @include breakpoint('tablet', 'phablet', 'mobile') {
+      display: none;
+    }
+  }
+
+  .page-home__img__man {
+    position: absolute;
+    right: 20rem;
+    bottom: -1.9rem;
+    z-index: 10;
+
+    @include breakpoint('tablet') {
+      right: 7rem;
+    }
+
+    @include breakpoint('phablet', 'mobile') {
+      display: none;
+    }
+  }
+
+  .page-home__img__woman {
+    position: absolute;
+    right: 7rem;
+    bottom: 0;
+    z-index: 10;
+
+    @include breakpoint('tablet') {
+      right: 2rem;
+    }
+
+    @include breakpoint('phablet', 'mobile') {
+      display: none;
+    }
+  }
+
+  .page-home__img__child {
+    position: absolute;
+    right: 0;
+    bottom: -1.9rem;
+    z-index: 20;
+
+    @include breakpoint('phablet', 'mobile') {
+      display: none;
+    }
+  }
+
+  .page-home__img__bottom-wave {
+    position: absolute;
+    bottom: -2rem;
+    width: 100%;
+    z-index: 50;
+
+    @include breakpoint('phablet', 'mobile') {
+      bottom: 0;
+    }
+  }
+
+  .page-home__div__container-splash-text {
+    box-sizing: border-box;
+    margin-top: 7rem;
+    margin-left: 4.5rem;
+    width: 25rem;
+    z-index: 100;
+
+    @include breakpoint('tablet', 'phablet') {
+      width: 24rem;
+    }
+
+    @include breakpoint('mobile') {
+      width: 80%;
+      margin: -5rem 0 0 10%;
+    }
+
+    .page-home__h2__splash-header {
+      margin-bottom: 1.25rem;
+      font-family: 'Merriweather', serif;
+      line-height: 4rem;
+      font-size: 3.25rem;
+      font-weight: 500;
+      color: #1b1146;
+
+      @include breakpoint('mobile') {
+        font-size: 2.5rem;
+      }
+    }
+
+    .page-home__p__splash-subtext {
+      box-sizing: border-box;
+      margin-bottom: 5rem;
+      line-height: 1.5rem;
+      font-family: 'Merriweather Sans', serif;
+      font-size: .95rem;
+      font-weight: 300;
+      color: #1b1146;
+    }
+
+    .page-home__a__link-shop {
+      padding: 1rem 3rem;
+      font-family: 'Merriweather Sans', serif;
+      font-weight: 600;
+      font-size: .85rem;
+      letter-spacing: 1px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: white;
+      background-color: #1E3C7C;
+    }
+  }
+}
+
+.page-home__section__container-features {
+  margin-top: 3rem;
+  padding: 0 0 4rem 0;
+
+  .page-home__h2__features-container-header {
+    margin-bottom: 5rem;
+  }
+
+  .page-home__div__wrapper-features-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint('mobile', 'phablet') {
+      flex-direction: column;
+    }
+
+    .page-home__div__container-feature-element {
+      width: 17.5rem;
+      padding: 0 2rem;
+
+      @include breakpoint('mobile', 'phablet') {
+        margin-bottom: 2rem;
+      }
+
+      @include breakpoint('phablet') {
+        width: 20rem;
+      }
+
+      @include breakpoint('tablet') {
+        width: 13rem;
+        padding: 0 1.5rem;
+      }
+
+      .page-home__img__icon-reef-safe, .page-home__img__icon-white-cast, .page-home__img__icon-organic-filters {
+        display: block;
+        width: 4rem;
+        margin: 0 auto 1.25rem auto;
+      }
+
+      .page-home__img__icon-white-cast {
+        width: 5.5rem;
+        margin: 0 auto 2rem auto;
+      }
+
+      .page-home__h3__feature-header {
+        margin-bottom: 1rem;
+        font-family: 'Merriweather Sans', serif;
+        font-size: 1.1rem;
+        font-weight: 600;
+        word-spacing: 2px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #1B1146;
+      }
+
+      .page-home__p__feature-text {
+        font-family: 'Merriweather Sans', serif;
+        font-size: .85rem;
+        font-weight: 300;
+        line-height: 1.5rem;
+        letter-spacing: 1px;
+        text-align: center;
+        color: #1B1146;
+      }
+    }
+
+    .page-home__div__container-feature-element:last-of-type {
+      @include breakpoint('mobile', 'phablet') {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.page-home__section__wrapper-ingredients {
+  position: relative;
+
+  .page-home__div__container-ingredients-header {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 8rem 0 2rem 0;
+    background: url("../../assets/backgrounds/ingredients-top-bg.png") no-repeat center center;
+    background-size: cover;
+
+    @include breakpoint('phablet', 'mobile') {
+      background: url("../../assets/backgrounds/ingredients-top-mobile-bg.png") no-repeat center center;
+      background-size: cover;
+    }
+
+    .page-home__button__learn-more-link {
+      padding: 1rem 2.5rem;
+      margin: auto;
+      border: none;
+      outline: none;
+      font-family: 'Merriweather Sans', serif;
+      font-size: .95rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: white;
+      background-color: #1E3C7C;
+      cursor: pointer;
+    }
+  }
+
+  .page-home__div__container-ingredients-body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    // padding: 2rem 0 15rem 0;
+    padding: 2rem 0 17vw 0;
+    margin-bottom: 2.5rem;
+    background: url("../../assets/backgrounds/ingredients-bottom-bg.png") no-repeat center center;
+    background-size: cover;
+
+    @include breakpoint('mobile', 'phablet') {
+      flex-direction: column;
+      padding: 3rem 0 5rem 0;
+      background: url("../../assets/backgrounds/ingredients-bottom-mobile-bg.png") no-repeat center center;
+      background-size: cover;
+    }
+
+    .page-home__div__wrapper-horizontal-image-col {
+      display: none;
+
+      @include breakpoint('mobile', 'phablet') {
+        display: block;
+        width: 65%;
+        margin-bottom: 1rem;
+      }
+
+      .page-home__img__image-tube-horizontal {
+        display: block;
+        width: 100%;
+        margin: auto;
+      }
+    }
+
+    .page-home__div__wrapper-ingredients-col {
+      width: 17.5rem;
+      padding: 0 2rem;
+
+      @include breakpoint('tablet') {
+        width: 13rem;
+      }
+
+      @include breakpoint('mobile', 'phablet') {
+        width: 20rem;
+      }
+
+      .page-home__div__container-ingredient-element {
+        padding: 2rem 0;
+
+        .page-home__h3__ingredient-header {
+          margin-bottom: 1rem;
+          font-family: 'Merriweather Sans', serif;
+          font-size: 1.1rem;
+          font-weight: 600;
+          word-spacing: 2px;
+          text-transform: uppercase;
+          text-align: center;
+          color: #1b1146;
+        }
+
+        .page-home__p__ingredient-text {
+          font-family: 'Merriweather Sans', serif;
+          font-size: .85rem;
+          font-weight: 400;
+          line-height: 1.5rem;
+          letter-spacing: 1px;
+          text-align: center;
+          color: #1b1146;
+        }
+      }
+    }
+
+    .page-home__div__wrapper-ingredients-image-col {
+      width: 12rem;
+      padding: 0 2rem;
+
+      @include breakpoint('mobile', 'phablet') {
+        display: none;
+      }
+
+      .page-home__img__image-ingredients {
+        display: block;
+        width: 10rem;
+        margin: auto;
+      }
+    }
+  }
+
+  .page-home__img__image-arm {
+    position: absolute;
+    left: 0;
+    top: 80%;
+    width: 80%;
+
+    @include breakpoint('mobile', 'phablet') {
+      display: none;
+    }
+
+    @include breakpoint('tablet') {
+      left: 0;
+      top: 82.5%;
+    }
+  }
+}
+
+.page-home__section__hidden-ingredients-overlay {
+  display: none;
+}
+
+.page-home__section__visible-ingredients-overlay {
+  box-sizing: border-box;
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  width: 45rem;
+  max-height: 100vh;
+  overflow: scroll;
+  padding: 3rem 4rem;
+  border: .2rem solid #1b1146;
+  background-color: rgba(255,255,255,.975);
+
+  @include breakpoint('phablet', 'mobile') {
+    width: 100%;
+    height: 100vh;
+    border: none;
+  }
+
+  .page-home__img__icon-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 1rem;
+    cursor: pointer;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    line-height: 3rem;
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    color: #1B1146;
+  }
+
+  p {
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+    font-family: 'Merriweather Sans', serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #353535;
+  }
+}
+
+.page-home__section__container-learn {
+  margin-top: -5rem;
+  background-color: #FFFFFF;
+
+  .page-home__div__wrapper-learn-row {
+    display: flex;
+    flex-direction: row;
+
+    @include breakpoint('mobile','phablet') {
+      flex-direction: column;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .page-home__div__container-learn-element {
+      width: 18rem;
+      padding: 2rem;
+
+      @include breakpoint('tablet') {
+        width: 13rem;
+        padding: 2rem 1.5rem;
+      }
+
+      @include breakpoint('mobile','phablet') {
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      @include breakpoint('phablet') {
+        width: 40rem;
+      }
+
+      .page-home__img__image-learn-icon {
+        display: block;
+        width: 16rem;
+        margin: 0 auto 1.5rem auto;
+
+        @include breakpoint('mobile','phablet') {
+          align-self: center;
+          width: 7.5rem;
+          margin: 0 0 1rem 0;
+        }
+
+        @include breakpoint('phablet') {
+          width: 12rem;
+        }
+
+        @include breakpoint('tablet') {
+          width: 13rem;
+        }
+      }
+
+      .page-home__h3__learn-header {
+        margin-bottom: 1rem;
+        line-height: 1.5rem;
+        font-family: 'Merriweather Sans', serif;
+        font-size: 1.1rem;
+        font-weight: 600;
+        word-spacing: 2px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #1b1146;
+
+        @include breakpoint('mobile','phablet') {
+          text-align: center;
+        }
+      }
+
+      .page-home__p__learn-text {
+        font-family: 'Merriweather Sans', serif;
+        font-size: .85rem;
+        font-weight: 300;
+        line-height: 1.5rem;
+        letter-spacing: 1px;
+        text-align: center;
+        text-decoration: none;
+        color: #1b1146;
+      }
+    }
+  }
+}

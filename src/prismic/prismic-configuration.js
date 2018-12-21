@@ -1,5 +1,5 @@
 export default {
-  apiEndpoint: 'https://blend.prismic.io/api/v2',
+  apiEndpoint: 'https://blendsuncare.cdn.prismic.io/api/v2',
 
   // -- Access token if the Master is not open
   // accessToken: 'xxxxxx',

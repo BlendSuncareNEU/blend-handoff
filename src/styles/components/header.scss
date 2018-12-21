@@ -1,11 +1,85 @@
+@import '../mixins/_breakpoints.scss';
+
 .component-header__header__wrapper {
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   width: 100%;
-  padding: 2rem 0;
+  padding: 2.5rem 4.5rem;
+  position: absolute;
+  top: 0;
+  z-index: 200;
 
-  .component-header__h1__temp-brand-mark {
-    font-family: 'Merriweather', serif;
-    font-size: 1.75rem;
-    font-weight: 300;
+  @include breakpoint('mobile') {
+    padding: 2.5rem 10%;
+  }
+
+  .component-header__img__icon-wordmark {
+    width: 8.5rem;
+  }
+
+  .component-header__img__icon-menu {
+    display: none;
+    margin-left: auto;
+    width: 2rem;
+    cursor: pointer;
+
+    @include breakpoint('phablet', 'mobile') {
+      display: block;
+    }
+  }
+
+  .component-header__nav__navigation-page {
+    margin-left: 4rem;
+
+    @include breakpoint('phablet', 'mobile') {
+      display: none;
+    }
+
+    .component-header__img__icon-close {
+      display: none;
+    }
+
+    .component-header__a__page-link {
+      margin-right: 3rem;
+      font-size: 1.2rem;
+      font-family: "Merriweather Sans", sans-serif;
+      text-decoration: none;
+      color: #1b1146;
+    }
+  }
+
+  .component-header__nav__mobile-navigation-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(255,255,255,1);
+
+    .component-header__img__icon-close {
+      display: block;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      width: 1rem;
+      cursor: pointer;
+    }
+
+    .component-header__a__page-link {
+      padding-bottom: .25rem;
+      margin-bottom: 4rem;
+      border-bottom: .1rem solid #1b1146;
+      font-size: 1.2rem;
+      font-family: "Merriweather Sans", sans-serif;
+      text-decoration: none;
+      color: #1b1146;
+    }
   }
 }

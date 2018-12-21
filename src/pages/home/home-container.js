@@ -8,10 +8,28 @@ class HomeContainer extends React.Component {
 
   constructor(props) {
     super(props);
+
+    this.state = {
+      displayIngredientsOverlay: false,
+    };
+    this.toggleIngredientsOverlay = this.toggleIngredientsOverlay.bind(this);
+  }
+
+  toggleIngredientsOverlay(event) {
+    event.preventDefault();
+    this.setState({
+      displayIngredientsOverlay: !this.state.displayIngredientsOverlay,
+    });
   }
 
   render() {
-    return <Home />;
+    return (
+      <Home
+        displayIngredientsOverlay={this.state.displayIngredientsOverlay}
+        toggleIngredientsOverlay={event => this.toggleIngredientsOverlay(event)}
+        data={this.props.doc.data}
+      />
+    );
   }
 }
 

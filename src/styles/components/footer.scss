@@ -1,0 +1,142 @@
+@import '../mixins/_breakpoints.scss';
+
+.component-footer__footer__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 28rem;
+  padding: 0 4.5rem;
+  background: url("../../assets/backgrounds/footer-bg.png") no-repeat;
+  background-size: cover;
+
+  @include breakpoint('phablet', 'mobile') {
+    min-height: 45rem;
+    flex-direction: column;
+  }
+
+  .component-footer__div__wrapper-subscribe {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+
+    @include breakpoint('phablet','mobile') {
+      margin-top: 0;
+    }
+
+    .component-footer__p__subscribe-text {
+      margin-bottom: 1rem;
+      font-family: 'Merriweather Sans', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #1b1146;
+
+      @include breakpoint('phablet','mobile') {
+        text-align: center;
+      }
+    }
+
+    .component-footer__label__email {
+      margin-bottom: .5rem;
+      font-family: 'Merriweather Sans', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #1b1146;
+    }
+
+    .component-footer__div__info-row {
+      display: flex;
+      flex-direction: row;
+
+      input[type="email"] {
+        width: 17rem;
+        padding: .75rem 1rem;
+        border: none;
+        outline: none;
+        font-family: 'Merriweather Sans', serif;
+        font-size: 1.1rem;
+        font-weight: 300;
+
+        @include breakpoint('phablet','mobile') {
+          width: 15rem;
+        }
+      }
+
+      .component-footer__button__email-subscribe {
+        padding: .3rem 1rem;
+        border: none;
+        outline: none;
+        background-color: #FEB860;
+        cursor: pointer;
+
+        @include breakpoint('phablet','mobile') {
+          padding: .3rem .5rem;
+        }
+      }
+
+      .component-footer__img__icon-arrow {
+        width: 2.5rem;
+      }
+    }
+  }
+
+  .component-footer__nav__container-social-navigation {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 4rem 0 0 auto;
+
+    @include breakpoint('phablet', 'mobile') {
+      flex-direction: column-reverse;
+      margin: 2rem 0 0 0;
+    }
+
+    .component-footer__span__copy-text {
+      margin: 0 .5rem .5rem 0;
+      font-family: 'Merriweather Sans', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #1b1146;
+
+      @include breakpoint('phablet', 'mobile') {
+        margin: 1rem auto 0 auto;
+      }
+    }
+
+    .component-footer__div__container-links {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .component-footer__a__link-social {
+      padding: 0 .5rem;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    img {
+      width: 3.5rem;
+    }
+  }
+
+  .component-footer__img__bottom-palm {
+    position: absolute;
+    bottom: 0;
+    right: 20%;
+    z-index: 0;
+
+    @include breakpoint('mobile', 'phablet') {
+      bottom: 0;
+      left: 0;
+      width: 90%;
+    }
+  }
+}
