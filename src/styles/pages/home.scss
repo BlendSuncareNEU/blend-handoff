@@ -2,7 +2,8 @@
 
 // SHARED STYLES
 
-.page-home__section__container-features, .page-home__section__wrapper-ingredients,
+.page-home__section__container-features,
+.page-home__section__wrapper-ingredients,
 .page-home__section__container-learn {
   padding: 5rem 0 4rem 0;
   display: flex;
@@ -10,31 +11,33 @@
   align-items: center;
   justify-content: center;
 
-  .page-home__h2__features-container-header, .page-home__h2__ingredients-container-header,
-  .page-home__h2__learn-container-header{
+  .page-home__h2__features-container-header,
+  .page-home__h2__ingredients-container-header,
+  .page-home__h2__learn-container-header {
     margin-bottom: 1.25rem;
     line-height: 3rem;
     font-family: 'Merriweather', serif;
     font-size: 2.5rem;
     font-weight: 400;
     text-align: center;
-    color: #1B1146;
+    color: #1b1146;
 
     @include breakpoint('mobile') {
       width: 90%;
     }
   }
 
-  .page-home__p__ingredients-container-subtext, .page-home__p__learn-container-subtext {
+  .page-home__p__ingredients-container-subtext,
+  .page-home__p__learn-container-subtext {
     box-sizing: border-box;
     width: 40rem;
     margin-bottom: 3rem;
     line-height: 1.5rem;
     font-family: 'Merriweather Sans', serif;
-    font-size: .95rem;
+    font-size: 0.95rem;
     font-weight: 400;
     text-align: center;
-    color: #1B1146;;
+    color: #1b1146;
 
     @include breakpoint('phablet') {
       width: 30rem;
@@ -54,16 +57,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url("../../assets/backgrounds/splash-desktop-bg.png") no-repeat center center fixed;
+  background: url('../../assets/backgrounds/splash-desktop-bg.png') no-repeat
+    center center fixed;
   background-size: cover;
+  position: relative;
+  overflow: hidden;
 
   @include breakpoint('tablet', 'phablet') {
-    background: url("../../assets/backgrounds/splash-tablet-bg.png") no-repeat center center fixed;
+    background: url('../../assets/backgrounds/splash-tablet-bg.png') no-repeat
+      center center fixed;
     background-size: cover;
   }
 
   @include breakpoint('mobile') {
-    background: url("../../assets/backgrounds/splash-mobile-bg.png") no-repeat center center fixed;
+    background: url('../../assets/backgrounds/splash-mobile-bg.png') no-repeat
+      center center fixed;
     background-size: cover;
   }
 
@@ -193,7 +201,7 @@
       margin-bottom: 5rem;
       line-height: 1.5rem;
       font-family: 'Merriweather Sans', serif;
-      font-size: .95rem;
+      font-size: 0.95rem;
       font-weight: 300;
       color: #1b1146;
     }
@@ -202,12 +210,12 @@
       padding: 1rem 3rem;
       font-family: 'Merriweather Sans', serif;
       font-weight: 600;
-      font-size: .85rem;
+      font-size: 0.85rem;
       letter-spacing: 1px;
       text-decoration: none;
       text-transform: uppercase;
       color: white;
-      background-color: #1E3C7C;
+      background-color: #1e3c7c;
     }
   }
 }
@@ -223,7 +231,7 @@
   .page-home__div__wrapper-features-row {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 
     @include breakpoint('mobile', 'phablet') {
@@ -247,7 +255,9 @@
         padding: 0 1.5rem;
       }
 
-      .page-home__img__icon-reef-safe, .page-home__img__icon-white-cast, .page-home__img__icon-organic-filters {
+      .page-home__img__icon-reef-safe,
+      .page-home__img__icon-white-cast,
+      .page-home__img__icon-organic-filters {
         display: block;
         width: 4rem;
         margin: 0 auto 1.25rem auto;
@@ -255,7 +265,11 @@
 
       .page-home__img__icon-white-cast {
         width: 5.5rem;
-        margin: 0 auto 2rem auto;
+        margin: 1rem auto 2rem auto;
+
+        @include breakpoint('mobile', 'phablet') {
+          margin: 0 auto 2rem auto;
+        }
       }
 
       .page-home__h3__feature-header {
@@ -266,17 +280,17 @@
         word-spacing: 2px;
         text-transform: uppercase;
         text-align: center;
-        color: #1B1146;
+        color: #1b1146;
       }
 
       .page-home__p__feature-text {
         font-family: 'Merriweather Sans', serif;
-        font-size: .85rem;
+        font-size: 0.85rem;
         font-weight: 300;
         line-height: 1.5rem;
         letter-spacing: 1px;
         text-align: center;
-        color: #1B1146;
+        color: #1b1146;
       }
     }
 
@@ -298,11 +312,13 @@
     align-items: center;
     width: 100%;
     padding: 8rem 0 2rem 0;
-    background: url("../../assets/backgrounds/ingredients-top-bg.png") no-repeat center center;
+    background: url('../../assets/backgrounds/ingredients-top-bg.png') no-repeat
+      center center;
     background-size: cover;
 
     @include breakpoint('phablet', 'mobile') {
-      background: url("../../assets/backgrounds/ingredients-top-mobile-bg.png") no-repeat center center;
+      background: url('../../assets/backgrounds/ingredients-top-mobile-bg.png')
+        no-repeat center center;
       background-size: cover;
     }
 
@@ -312,13 +328,13 @@
       border: none;
       outline: none;
       font-family: 'Merriweather Sans', serif;
-      font-size: .95rem;
+      font-size: 0.95rem;
       font-weight: 600;
       letter-spacing: 1px;
       text-decoration: none;
       text-transform: uppercase;
       color: white;
-      background-color: #1E3C7C;
+      background-color: #1e3c7c;
       cursor: pointer;
     }
   }
@@ -333,13 +349,15 @@
     // padding: 2rem 0 15rem 0;
     padding: 2rem 0 17vw 0;
     margin-bottom: 2.5rem;
-    background: url("../../assets/backgrounds/ingredients-bottom-bg.png") no-repeat center center;
+    background: url('../../assets/backgrounds/ingredients-bottom-bg.png')
+      no-repeat center center;
     background-size: cover;
 
     @include breakpoint('mobile', 'phablet') {
       flex-direction: column;
       padding: 3rem 0 5rem 0;
-      background: url("../../assets/backgrounds/ingredients-bottom-mobile-bg.png") no-repeat center center;
+      background: url('../../assets/backgrounds/ingredients-bottom-mobile-bg.png')
+        no-repeat center center;
       background-size: cover;
     }
 
@@ -387,7 +405,7 @@
 
         .page-home__p__ingredient-text {
           font-family: 'Merriweather Sans', serif;
-          font-size: .85rem;
+          font-size: 0.85rem;
           font-weight: 400;
           line-height: 1.5rem;
           letter-spacing: 1px;
@@ -446,8 +464,8 @@
   max-height: 100vh;
   overflow: scroll;
   padding: 3rem 4rem;
-  border: .2rem solid #1b1146;
-  background-color: rgba(255,255,255,.975);
+  border: 0.2rem solid #1b1146;
+  background-color: rgba(255, 255, 255, 0.975);
 
   @include breakpoint('phablet', 'mobile') {
     width: 100%;
@@ -470,7 +488,7 @@
     font-size: 2.5rem;
     font-weight: 400;
     text-align: center;
-    color: #1B1146;
+    color: #1b1146;
   }
 
   p {
@@ -486,13 +504,13 @@
 
 .page-home__section__container-learn {
   margin-top: -5rem;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 
   .page-home__div__wrapper-learn-row {
     display: flex;
     flex-direction: row;
 
-    @include breakpoint('mobile','phablet') {
+    @include breakpoint('mobile', 'phablet') {
       flex-direction: column;
     }
 
@@ -509,7 +527,7 @@
         padding: 2rem 1.5rem;
       }
 
-      @include breakpoint('mobile','phablet') {
+      @include breakpoint('mobile', 'phablet') {
         box-sizing: border-box;
         width: 100%;
         display: flex;
@@ -525,7 +543,7 @@
         width: 16rem;
         margin: 0 auto 1.5rem auto;
 
-        @include breakpoint('mobile','phablet') {
+        @include breakpoint('mobile', 'phablet') {
           align-self: center;
           width: 7.5rem;
           margin: 0 0 1rem 0;
@@ -552,14 +570,14 @@
         text-transform: uppercase;
         color: #1b1146;
 
-        @include breakpoint('mobile','phablet') {
+        @include breakpoint('mobile', 'phablet') {
           text-align: center;
         }
       }
 
       .page-home__p__learn-text {
         font-family: 'Merriweather Sans', serif;
-        font-size: .85rem;
+        font-size: 0.85rem;
         font-weight: 300;
         line-height: 1.5rem;
         letter-spacing: 1px;

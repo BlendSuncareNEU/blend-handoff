@@ -19,10 +19,11 @@ const About = ({ data }) => (
         <img src={bottomWave} className="page-about__img__bottom-wave" />
       </section>
       <section className="page-about__section__wrapper-content">
-        <p className="page-about__p__intro-text">
-          {RichText.asText(data.about_intro_text)}
-        </p>
-        <div className="page-about__div__wrapper-member">
+        <div className="page-about__p__intro-text">
+          {/* {RichText.asText(data.about_intro_text)} */}
+          {RichText.render(data.about_intro_text)}
+        </div>
+        {/* <div className="page-about__div__wrapper-member">
           <img
             src={data.founder_image.url}
             alt={data.founder_image.alt}
@@ -32,7 +33,7 @@ const About = ({ data }) => (
             <h2>{RichText.asText(data.founder_header)}</h2>
             <p>{RichText.asText(data.founder_about)}</p>
           </div>
-        </div>
+        </div> */}
       </section>
       <Footer />
     </div>

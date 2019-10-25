@@ -70,7 +70,7 @@ const Footer = () => (
         &copy; Blend 2018
       </span>
       <div className="component-footer__div__container-links">
-        <a href="#" className="component-footer__a__link-social">
+        {/* <a href="#" className="component-footer__a__link-social">
           <img
             src={twitterIcon}
             alt=""
@@ -83,8 +83,12 @@ const Footer = () => (
             alt=""
             className="component-footer__img__icon-social"
           />
-        </a>
-        <a href="#" className="component-footer__a__link-social">
+        </a> */}
+        <a
+          href="https://instagram.com/blendsuncare"
+          target="_blank"
+          className="component-footer__a__link-social"
+        >
           <img
             src={instagramIcon}
             alt=""

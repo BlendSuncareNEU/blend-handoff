@@ -7,8 +7,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: rgb(244,111,56);
-  background: linear-gradient(180deg, rgba(244,111,56,1) 0%, rgba(255,207,124,1) 50%) fixed;
+  background: rgb(244, 111, 56);
+  background: linear-gradient(
+      180deg,
+      rgba(244, 111, 56, 1) 0%,
+      rgba(255, 207, 124, 1) 50%
+    )
+    fixed;
 
   .page-about__h2__splash-header {
     margin: 0 0 1.25rem 4.55rem;
@@ -53,6 +58,15 @@
     font-size: 1rem;
     font-weight: 300;
     color: #353535;
+
+    p + p {
+      margin-top: 2rem;
+    }
+
+    a {
+      color: #1b1146;
+      font-weight: 400;
+    }
   }
 
   .page-about__div__wrapper-member {
