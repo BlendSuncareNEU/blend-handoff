@@ -28,6 +28,7 @@
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.4",
     "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^1.0.1",
     "eslint": "^5.9.0",
     "eslint-plugin-import": "^2.11.0",
