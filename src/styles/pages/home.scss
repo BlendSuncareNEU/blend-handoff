@@ -60,6 +60,8 @@
   background: url('../../assets/backgrounds/splash-desktop-bg.png') no-repeat
     center center fixed;
   background-size: cover;
+  position: relative;
+  overflow: hidden;
 
   @include breakpoint('tablet', 'phablet') {
     background: url('../../assets/backgrounds/splash-tablet-bg.png') no-repeat
@@ -219,7 +221,8 @@
 }
 
 .page-home__section__container-features {
-  padding: 3rem 0 4rem 0;
+  margin-top: 3rem;
+  padding: 0 0 4rem 0;
 
   .page-home__h2__features-container-header {
     margin-bottom: 5rem;
