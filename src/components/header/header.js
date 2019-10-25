@@ -39,9 +39,9 @@ const Header = ({ toggleMobileNavigation, displayMobileNavigation }) => (
       <Link to="/about-us" className="component-header__a__page-link">
         About Us
       </Link>
-      <HashLink to="/#learn-section" className="component-header__a__page-link">
+      {/* <HashLink to="/#learn-section" className="component-header__a__page-link">
         Learn
-      </HashLink>
+      </HashLink> */}
     </nav>
   </header>
 );
